@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Barbershop</title>
+    <meta name="description" content="Experience the finest haircuts and shaves at AJ Barbershop in Ypsilanti. Modern style with a touch of classic heritage. Book your appointment today!">
+    <meta name="keywords" content="barber shop, barbershop, haircut, shave, men's grooming, Ypsilanti, Michigan, traditional barber, modern haircuts, AJ Barbershop">
+    <meta name="google-site-verification" content="A6rcL6ucM39yJSVGOGgqN8Mb6O43PHp-TilwbUQ-_cY" />
+    <link rel="icon" href="https://placehold.co/32x32?text=AJ" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2jwojgUNOWRrL5mXG3sQ/YVEE2yeGa5sLhoP_A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #0d0d0d; /* Dark background */
+            color: #e0e0e0; /* Light text */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #f0f0f0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #a77700, #c8a32a); /* Gold gradient */
+            color: #1a1a1a;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(167, 119, 0, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(167, 119, 0, 0.6);
+            background: linear-gradient(135deg, #c8a32a, #a77700);
+        }
+
+        .bg-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23221A00" fill-opacity=".12"><path d="M30 60L0 30 30 0 60 30zM30 30L0 0h60L30 30z" /><path d="M0 30L30 0h60L30 30z" /><path d="M30 30L0 0v60l30-30z" /><path d="M60 30L30 0v60l30-30z" /><path d="M30 0L0 30l30 30 30-30L30 0zM30 30L0 0v60l30-30z" /></g></g></svg>');
+            background-size: 60px 60px;
+            background-repeat: repeat;
+        }
+
+        .navbar-shadow {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #a77700, #ffeb99);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-glow {
+            transition: all 0.3s ease;
+        }
+
+        .card-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(167, 119, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <header class="fixed w-full z-50 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-sm py-4 navbar-shadow">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-gradient">
+                AJ Barbershop
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
+                <a href="#gallery" class="text-gray-300 hover:text-white transition duration-300">Gallery</a>
+                <a href="#book" class="text-gray-300 hover:text-white transition duration-300">Book Now</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none" aria-label="Open menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a] py-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#about" class="mobile-menu-link text-gray-300 hover:text-white transition duration-300">About</a>
+                <a href="#services" class="mobile-menu-link text-gray-300 hover:text-white transition duration-300">Services</a>
+                <a href="#gallery" class="mobile-menu-link text-gray-300 hover:text-white transition duration-300">Gallery</a>
+                <a href="#book" class="mobile-menu-link text-gray-300 hover:text-white transition duration-300">Book Now</a>
+                <a href="#contact" class="mobile-menu-link text-gray-300 hover:text-white transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-cover bg-center h-screen flex items-center justify-center text-center px-4" style="background-image: url('https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/56b7a069-54b1-40d1-8de6-0d47a0aec38f.png');">
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gradient">
+                    Experience Regal Grooming
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-300">
+                    Where timeless traditions meet modern precision. AJ Barbershop offers an unparalleled grooming experience in Ypsilanti.
+                </p>
+                <a href="#book" class="btn-primary inline-block">
+                    Book Your Appointment Now <i class="ml-2 fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-[#111] bg-pattern">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908147788-albn6.jpeg" alt="Barbershop Interior with vintage chairs" class="rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-6 text-gradient">Our Legacy of Excellence</h2>
+                    <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                        At AJ Barbershop, we blend timeless grooming traditions with cutting-edge styles. Our skilled barbers are artisans, dedicated to crafting the perfect look for every client. From classic cuts to modern fades, hot towel shaves to beard trims, we ensure a luxurious and precise experience every time.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        Step into an ambiance of sophistication and relaxation, where every visit is more than just a haircut – it's a ritual.
+                    </p>
+                    <a href="#contact" class="mt-8 inline-block text-gray-300 hover:text-white transition duration-300 border-b border-gray-500 hover:border-white pb-1">
+                        Visit Our Shop <i class="ml-2 fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-[#0d0d0d]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-16 text-gradient">Our Signature Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-cut text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">AJ's Signature Cut</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            A personalized haircut tailored to your style, head shape, and hair type. Includes a refreshing wash and styling.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">$30</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-hat-cowboy text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Royal Shave</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Experience the ultimate hot towel shave with premium products for a smooth, irritation-free finish.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">$40</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-mitten text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Beard Trim & Shape</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Precision beard trimming, shaping, and conditioning to keep your facial hair looking its best.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">$20</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-hand-sparkles text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Father & Son Package</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            A special bonding experience with a cut for both father and son.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">$55</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-brush text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Hair Coloring</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Subtle highlights or full color to enhance your natural look or try something new.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">Starts at $65</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-8 rounded-xl shadow-lg card-glow">
+                        <i class="fas fa-concierge-bell text-5xl text-[#a77700] mb-6"></i>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">The Full Grooming Treatment</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Includes AJ's Signature Cut, Royal Shave, and Beard Trim. The ultimate grooming experience.
+                        </p>
+                        <p class="text-xl font-bold text-[#c8a32a] mt-4">$85</p>
+                    </div>
+                </div>
+                <a href="#book" class="btn-primary inline-block mt-16">
+                    Book a Service <i class="ml-2 fas fa-calendar-alt"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-24 bg-[#111] bg-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-16 text-gradient">Our Masterpieces</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908238560-zg0sjh.png" alt="A sharp fade haircut" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908169622-igszc5.jpeg" alt="A barber carefully trimming a beard" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908177333-k28ldc.jpeg" alt="A classic scissor haircut in progress" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908185305-x3ibcr.jpeg" alt="A happy client showing off his new haircut" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908194279-d5wfon.jpeg" alt="Preparing for a hot towel shave" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908211804-avf40d.jpeg" alt="Detailed line-up work on a client's hair" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908224695-qwv6cg.jpeg" alt="Barber styling a client's hair with product" class="w-full h-full object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/d220ead1-57a5-4572-be07-313438669741/1767908232906-asbvi.jpeg" alt="Side profile of a clean modern haircut" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="book" class="py-24 bg-[#0d0d0d]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-16 text-gradient">Reserve Your Spot</h2>
+                <div class="max-w-3xl mx-auto bg-[#1a1a1a] p-8 md:p-12 rounded-xl shadow-xl">
+                    <p class="text-lg text-gray-400 mb-8">
+                        Book your appointment with our expert barbers. We are open Monday - Friday, 9:00 AM - 5:00 PM.
+                    </p>
+                    <form class="space-y-6 text-left">
+                        <div>
+                            <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email_phone" class="block text-gray-300 text-sm font-medium mb-2">Email Address / Phone Number</label>
+                            <input type="text" id="email_phone" name="email_phone" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" placeholder="john.doe@example.com or (123) 456-7890" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-300 text-sm font-medium mb-2">Select Service</label>
+                            <select id="service" name="service" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" required>
+                                <option value="">-- Choose a service --</option>
+                                <option value="aj-cut">AJ's Signature Cut ($30)</option>
+                                <option value="royal-shave">Royal Shave ($40)</option>
+                                <option value="beard-trim">Beard Trim & Shape ($20)</option>
+                                <option value="father-son">Father & Son Package ($55)</option>
+                                <option value="hair-coloring">Hair Coloring (Starts at $65)</option>
+                                <option value="full-grooming">The Full Grooming Treatment ($85)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="date" class="block text-gray-300 text-sm font-medium mb-2">Date</label>
+                                <input type="date" id="date" name="date" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" required>
+                            </div>
+                            <div>
+                                <label for="time" class="block text-gray-300 text-sm font-medium mb-2">Time (9:00 AM - 5:00 PM)</label>
+                                <input type="time" id="time" name="time" min="09:00" max="17:00" step="900" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" required>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full btn-primary flex items-center justify-center">
+                                Confirm Appointment <i class="ml-2 fas fa-check-circle"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-[#111] bg-pattern">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-16 text-gradient">Connect With Us</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Visit Our Shop</h3>
+                        <p class="text-lg text-gray-400 mb-2 flex items-center">
+                            <i class="fas fa-map-marker-alt text-[#a77700] mr-3"></i>
+                            2884 Washtenaw Ave, Ypsilanti, MI 48197, United States
+                        </p>
+                        <p class="text-lg text-gray-400 mb-2 flex items-center">
+                            <i class="fas fa-phone-alt text-[#a77700] mr-3"></i>
+                            (734) 829-9214
+                        </p>
+                        <p class="text-lg text-gray-400 mb-6 flex items-center">
+                            <i class="fas fa-clock text-[#a77700] mr-3"></i>
+                            Mon - Fri: 9:00 AM - 5:00 PM
+                        </p>
+                        <div class="map-container overflow-hidden rounded-xl shadow-lg border border-[#3a3a3a]">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.052631551327!2d-83.65582232353723!3d42.24075127119438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883ca8e937d11e83%3A0xcf82c222e92c6b41!2s2884%20Washtenaw%20Ave%2C%20Ypsilanti%2C%20MI%2048197%2C%20USA!5e0!3m2!1sen!2sde!4v1701768686000!5m2!1sen!2sde"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Send Us a Message</h3>
+                        <form class="space-y-6 bg-[#1a1a1a] p-8 rounded-xl shadow-lg">
+                            <div>
+                                <label for="contact-name" class="block text-gray-300 text-sm font-medium mb-2">Your Name</label>
+                                <input type="text" id="contact-name" name="contact-name" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" required>
+                            </div>
+                            <div>
+                                <label for="contact-email_phone" class="block text-gray-300 text-sm font-medium mb-2">Email Address / Phone Number</label>
+                                <input type="text" id="contact-email_phone" name="contact-email_phone" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" placeholder="john.doe@example.com or (123) 456-7890" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-300 text-sm font-medium mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-md bg-[#2a2a2a] border border-[#3a3a3a] focus:ring-2 focus:ring-[#a77700] focus:border-transparent text-white" required></textarea>
+                            </div>
+                            <div class="pt-4">
+                                <button type="submit" class="w-full btn-primary flex items-center justify-center">
+                                    Send Message <i class="ml-2 fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d0d0d] py-12 border-t border-[#222]">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p class="mb-4">&copy; 2024 AJ Barbershop. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/ajbarbershop7348299214" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+        
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', function (event) {
+            event.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
